@@ -1,0 +1,126 @@
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background-color: khaki;
+    perspective: 1000px; /* Adds depth for 3D transforms */
+}
+
+/* ===== 3D Heading ===== */
+h1 {
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: #ce1111;
+    background-color: #270202;
+    display: inline-block;
+    padding: 20px 40px;
+    margin-top: 50px;
+    text-shadow:
+        2px 2px 0 #000,
+        4px 4px 0 #555,
+        6px 6px 0 #999;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    transform: rotateX(10deg) rotateY(10deg);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+h1:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* ===== 3D Ordered List ===== */
+ol {
+    list-style-position: inside;
+    width: fit-content;
+    margin: 50px auto;
+    padding: 20px 40px;
+    background: linear-gradient(145deg, #fff8dc, #e6d79e);
+    border-radius: 15px;
+    box-shadow: 
+        10px 10px 20px rgba(0, 0, 0, 0.4),
+        -5px -5px 15px rgba(255, 255, 255, 0.5);
+    transform: rotateX(5deg) rotateY(-5deg);
+    transition: all 0.3s ease;
+}
+
+ol:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.03);
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.6),
+        inset 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+ol li {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #270202;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    /* justify-content: space-around; */
+}
+
+/* ===== 3D Input Field ===== */
+input {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    color: #270202;
+    background: linear-gradient(145deg, #fff8dc, #e6d79e);
+    box-shadow: 
+        4px 4px 10px rgba(0, 0, 0, 0.3),
+        -4px -4px 10px rgba(255, 255, 255, 0.4);
+    transform: rotateX(5deg);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    transform: rotateX(0deg) scale(1.05);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.5),
+        inset 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* ===== 3D Button ===== */
+button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(145deg, #ce1111, #8b0d0d);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 
+        6px 6px 15px rgba(0, 0, 0, 0.4),
+        -3px -3px 10px rgba(255, 255, 255, 0.3);
+    transform: rotateX(6deg);
+    transition: all 0.25s ease;
+    margin-left: 10px;
+}
+
+button:hover {
+    transform: rotateX(0deg) scale(1.1);
+    box-shadow: 
+        0 10px 25px rgba(0, 0, 0, 0.6),
+        inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+button:active {
+    transform: rotateX(0deg) scale(0.95);
+    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.6);
+}
